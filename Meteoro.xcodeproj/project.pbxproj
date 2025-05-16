@@ -6,8 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		92A94C3291D2AEEE16962C56 /* Pods_Meteoro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A86B4CAB892A0FA666093EFF /* Pods_Meteoro.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		658592866613117489FA9DEA /* Pods-Meteoro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteoro.release.xcconfig"; path = "Target Support Files/Pods-Meteoro/Pods-Meteoro.release.xcconfig"; sourceTree = "<group>"; };
 		75C8192E2DD7580B000F7B8B /* Meteoro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meteoro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A86B4CAB892A0FA666093EFF /* Pods_Meteoro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meteoro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F122E799E0ED04F0AEF0D045 /* Pods-Meteoro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meteoro.debug.xcconfig"; path = "Target Support Files/Pods-Meteoro/Pods-Meteoro.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -36,17 +43,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A94C3291D2AEEE16962C56 /* Pods_Meteoro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		518C7B867DA369CCDBCDBA9B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F122E799E0ED04F0AEF0D045 /* Pods-Meteoro.debug.xcconfig */,
+				658592866613117489FA9DEA /* Pods-Meteoro.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		75C819252DD7580B000F7B8B = {
 			isa = PBXGroup;
 			children = (
 				75C819302DD7580B000F7B8B /* Meteoro */,
 				75C8192F2DD7580B000F7B8B /* Products */,
+				518C7B867DA369CCDBCDBA9B /* Pods */,
+				881D238EB7D53ADFF39A64E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +77,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		881D238EB7D53ADFF39A64E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A86B4CAB892A0FA666093EFF /* Pods_Meteoro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -65,9 +92,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75C819412DD7580C000F7B8B /* Build configuration list for PBXNativeTarget "Meteoro" */;
 			buildPhases = (
+				DBBDD168BA3C3507D675D557 /* [CP] Check Pods Manifest.lock */,
 				75C8192A2DD7580B000F7B8B /* Sources */,
 				75C8192B2DD7580B000F7B8B /* Frameworks */,
 				75C8192C2DD7580B000F7B8B /* Resources */,
+				AC27E7989F272092D906D674 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -77,8 +106,6 @@
 				75C819302DD7580B000F7B8B /* Meteoro */,
 			);
 			name = Meteoro;
-			packageProductDependencies = (
-			);
 			productName = Meteoro;
 			productReference = 75C8192E2DD7580B000F7B8B /* Meteoro.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +154,52 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		AC27E7989F272092D906D674 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBBDD168BA3C3507D675D557 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Meteoro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75C8192A2DD7580B000F7B8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -140,12 +213,14 @@
 /* Begin XCBuildConfiguration section */
 		75C819422DD7580C000F7B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F122E799E0ED04F0AEF0D045 /* Pods-Meteoro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7U46JJ645;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meteoro/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
@@ -170,12 +245,14 @@
 		};
 		75C819432DD7580C000F7B8B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 658592866613117489FA9DEA /* Pods-Meteoro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N7U46JJ645;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meteoro/Supporting/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.weather";
