@@ -26,7 +26,7 @@ extension UserDefaults {
                     print("Kayıt yüklerken hata oluştu: \(error)")
                 }
             }
-            return nil
+            return [Constants.init().defaultCity]
         }
         set {
             DispatchQueue.main.async { [weak self] in
@@ -59,7 +59,7 @@ extension UserDefaults {
                     print("Seçili Şehir yüklenirken hata oluştu: \(error)")
                 }
             }
-            return nil
+            return Constants.init().defaultCity
         }
         set {
             DispatchQueue.main.async { [weak self] in

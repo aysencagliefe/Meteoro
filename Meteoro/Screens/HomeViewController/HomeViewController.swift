@@ -10,8 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate, SelectedCityViewControllerDelegate {
   
     
-   
-    
+    let selectedCity = UserDefaults.standard.selectedCity 
+
     var viewModel: HomeViewControllerViewModel = {
         HomeViewControllerViewModel(
             dataProvider: HomeViewControllerDataProvider())
@@ -38,7 +38,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let selectedCity = UserDefaults.standard.selectedCity
         viewModel.nowWeather(merkezid: String(describing: selectedCity?.merkezID ?? 0))
         viewModel.todayHourlyWeather(istno: String(describing: selectedCity?.saatlikTahminIstNo ?? 0))
         viewModel.fiveDaysWeather(istno: String(describing: selectedCity?.gunlukTahminIstNo ?? 0))
@@ -125,11 +124,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
-    func didTapWarningButton(in cell: NowWeatherCollectionViewCell) {
-       // let warningVC = WarningViewController(nibName: "WarningViewController", bundle: nil)
-       // warningVC.delegate = self
-       // present(warningVC, animated: true, completion: nil)
-    }
     
     
     func transferringSelectedCity(_ city: SearchCitiesResponse) {

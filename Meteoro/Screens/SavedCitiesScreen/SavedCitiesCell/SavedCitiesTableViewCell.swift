@@ -12,8 +12,7 @@ class SavedCitiesTableViewCell: UITableViewCell {
     
     @IBOutlet weak var savedCitiesView: UIView!
     @IBOutlet weak var cityLabel: UILabel!
-    @IBOutlet weak var cityTemperature: UILabel!
-    @IBOutlet weak var cityimage: UIImageView!
+    
     
     var city : SearchCitiesResponse? {
         didSet {
@@ -21,10 +20,8 @@ class SavedCitiesTableViewCell: UITableViewCell {
                     cityLabel.text = city?.il ?? ""
                 } else {
                     cityLabel.text = (city?.ilce ?? "") + ", " + (city?.il ?? "")
-                }
-            cityTemperature.text = String("\(city?.sondurumIstNo)°C")
-            //cityimage.image = UIImage(named: city?.)
-            }
+                }   
+        }
     }
     
     override func awakeFromNib() {

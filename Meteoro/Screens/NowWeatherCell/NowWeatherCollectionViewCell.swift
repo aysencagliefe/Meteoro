@@ -28,17 +28,20 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    var weatherStatus: WeatherStatus?
     
     var nowWeatherResponse : NowWeatherResponseElement? {
         didSet {
             if let nowWeatherResponse {
+                weatherStatus = WeatherStatus(rawValue: nowWeatherResponse.hadiseKodu)
                 cityNameLabel.text = "\(nowWeatherResponse.istNo)"
                 dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
-                visualSkyLabel.image = UIImage(named: nowWeatherResponse.hadiseKodu)
+                visualSkyLabel.image = weatherStatus?.icon
                 temperatureLabel.text = String("\(nowWeatherResponse.sicaklik )°C")
                 humidityLabel.text =    String("Nem: %\(nowWeatherResponse.nem)")
                 windyLabel.text =       String("Rüzgar: \(nowWeatherResponse.ruzgarHiz.toFormattedString(withDecimalPlaces: 2)) km/sa")
                 pressureAirLabel.text = String("Basınç: \(nowWeatherResponse.aktuelBasinc) hPa")
+                nowWeatherView.applyGradient(startColor: weatherStatus?.gradientColors[0] , endColor: weatherStatus?.gradientColors[1])
             }
         }
     }
@@ -52,16 +55,13 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
         delegate?.didTapSavedButton(in: self)
     }
     
-    @IBAction func warningsButton(_ sender: Any) {
-        delegate?.didTapWarningButton(in: self)
-    }
     
     
     
 
     func dateFormatter(dateString: String) -> String {
         let inputFormatter = DateFormatter()
-        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'" // Gelen API formatı
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
         inputFormatter.timeZone = TimeZone(secondsFromGMT: 0)
 
         if let date = inputFormatter.date(from: dateString) {
@@ -79,5 +79,5 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
 
 protocol NowWeatherCollectionViewCellDelegate: AnyObject {
     func didTapSavedButton(in cell: NowWeatherCollectionViewCell)
-    func didTapWarningButton(in cell: NowWeatherCollectionViewCell)
+    
 }
