@@ -42,7 +42,6 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
                 humidityLabel.text =    String("Nem: %\(nowWeatherResponse.nem)")
                 windyLabel.text =       String("Rüzgar: \(nowWeatherResponse.ruzgarHiz.toFormattedString(withDecimalPlaces: 2)) km/sa")
                 pressureAirLabel.text = String("Basınç: \(nowWeatherResponse.aktuelBasinc) hPa")
-                nowWeatherView.applyGradient(startColor: weatherStatus?.gradientColors[0] , endColor: weatherStatus?.gradientColors[1])
             }
         }
     }

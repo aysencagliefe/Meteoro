@@ -12,6 +12,12 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
     var fiveDaysResponse: FiveDaysWeatherResponse? {
         didSet {
             guard let fiveDaysResponse else { return }
+            let weatherStatus1 = WeatherStatus(rawValue: fiveDaysResponse.hadiseGun1)
+            let weatherStatus2 = WeatherStatus(rawValue: fiveDaysResponse.hadiseGun2)
+            let weatherStatus3 = WeatherStatus(rawValue: fiveDaysResponse.hadiseGun3)
+            let weatherStatus4 = WeatherStatus(rawValue: fiveDaysResponse.hadiseGun4)
+            let weatherStatus5 = WeatherStatus(rawValue: fiveDaysResponse.hadiseGun5)
+
             dayLabel1.text = getDayOfWeek(from: fiveDaysResponse.tarihGun1)
             dayLabel2.text = getDayOfWeek(from: fiveDaysResponse.tarihGun2)
             dayLabel3.text = getDayOfWeek(from: fiveDaysResponse.tarihGun3)
@@ -32,11 +38,17 @@ class FiveDaysWeatherCollectionViewCell: UICollectionViewCell {
             highestTemperature3.text = String("Yüksek \(fiveDaysResponse.enYuksekGun3 )°C")
             highestTemperature4.text = String("Yüksek \(fiveDaysResponse.enYuksekGun4 )°C")
             highestTemperature5.text = String("Yüksek \(fiveDaysResponse.enYuksekGun5 )°C")
-            imageIcon1.image = UIImage(named: fiveDaysResponse.hadiseGun1)
-            imageIcon2.image = UIImage(named: fiveDaysResponse.hadiseGun2)
-            imageIcon3.image = UIImage(named: fiveDaysResponse.hadiseGun3)
-            imageIcon4.image = UIImage(named: fiveDaysResponse.hadiseGun4)
-            imageIcon5.image = UIImage(named: fiveDaysResponse.hadiseGun5)
+            imageIcon1.image = weatherStatus1?.icon
+            imageIcon2.image = weatherStatus2?.icon
+            imageIcon3.image = weatherStatus3?.icon
+            imageIcon4.image = weatherStatus4?.icon
+            imageIcon5.image = weatherStatus5?.icon
+            fiveDayView1.backgroundColor = weatherStatus1?.gradientColors.first
+            fiveDayView2.backgroundColor = weatherStatus2?.gradientColors.first
+            fiveDayView3.backgroundColor = weatherStatus3?.gradientColors.first
+            fiveDayView4.backgroundColor = weatherStatus4?.gradientColors.first
+            fiveDayView5.backgroundColor = weatherStatus5?.gradientColors.first
+
         }
     }
     

@@ -15,16 +15,15 @@ extension UIView {
         self.layer.cornerRadius = 10
         self.layer.masksToBounds = false
 
-        /*
+        
         // Gölge ekle
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.2
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowRadius = 4
-         */
+        self.layer.shadowRadius = 2
         
         // Kenar çizgisi ekle
         self.layer.borderColor = UIColor.lightGray.cgColor
-        self.layer.borderWidth = 1
+        self.layer.borderWidth = 0
     }
 }

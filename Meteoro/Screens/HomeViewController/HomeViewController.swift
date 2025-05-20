@@ -101,7 +101,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func nowReceiveData(_data: NowWeatherResponseElement?) {
         self.refreshControl.endRefreshing()
         nowWeatherResponse = _data
+        setBackgroundColorWithNowWeather(nowWeatherResponse: _data)
         homeCollectionView.reloadData()
+    }
+    
+    func setBackgroundColorWithNowWeather(nowWeatherResponse: NowWeatherResponseElement?) {
+        let weatherStatus = WeatherStatus(rawValue: nowWeatherResponse?.hadiseKodu ?? "")
+        view.applyGradient(
+            startColor: weatherStatus?.gradientColors[0],
+            endColor: weatherStatus?.gradientColors[1]
+        )
     }
     
     func todayHourlyReceiveData(_data: TodayHourlyWeatherResponse?) {
