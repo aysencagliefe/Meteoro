@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpAccountViewController" customModule="Meteoro" customModuleProvider="target">
+            <connections>
+                <outlet property="againPasswordTextField" destination="4oN-gK-B9z" id="n8c-WV-Lbu"/>
+                <outlet property="emailTextField" destination="KDP-3t-HFJ" id="hdd-PW-4Aa"/>
+                <outlet property="passwordTextField" destination="gdQ-kz-JXJ" id="vvX-MR-jP9"/>
+                <outlet property="userNameTextField" destination="hbq-v2-vPS" id="7W5-nY-ng1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kayıt Ol" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGa-Hw-wOb">
+                    <rect key="frame" x="106" y="90" width="170" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TyY-WP-wH7"/>
+                        <constraint firstAttribute="width" constant="202" id="Vnn-zp-VlR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre Tekrarı:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4oN-gK-B9z">
+                    <rect key="frame" x="109" y="478" width="164" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="196" id="AF3-Ai-aZ9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hbq-v2-vPS">
+                    <rect key="frame" x="109" y="270" width="164" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="196" id="mRs-Id-64c"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDP-3t-HFJ">
+                    <rect key="frame" x="109" y="334" width="164" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="196" id="Ptf-hO-kZw"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gdQ-kz-JXJ">
+                    <rect key="frame" x="109" y="410" width="164" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="196" id="hl2-By-QNn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyD-0i-VeQ">
+                    <rect key="frame" x="20" y="90" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="S0m-Cq-IZK"/>
+                        <constraint firstAttribute="height" constant="60" id="wFz-L8-0WH"/>
+                    </constraints>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                    <connections>
+                        <action selector="xDismissButton:" destination="-1" eventType="touchUpInside" id="BPr-V8-N6k"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSu-E3-Wlf">
+                    <rect key="frame" x="141" y="520" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="12l-K9-4aZ"/>
+                        <constraint firstAttribute="width" constant="100" id="CtJ-Oy-Ewg"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="eIs-N1-2km"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ycG-E1-jPj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpButton:" destination="-1" eventType="touchUpInside" id="7Al-M5-ILn"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.57931608980000004" green="0.77992919189999999" blue="0.96220838860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="tintColor" red="0.57931608980000004" green="0.77992919189999999" blue="0.96220838860000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="hbq-v2-vPS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="1de-3V-1ep"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gdQ-kz-JXJ" secondAttribute="trailing" constant="109" id="39n-ex-gJz"/>
+                <constraint firstItem="hbq-v2-vPS" firstAttribute="top" secondItem="ZGa-Hw-wOb" secondAttribute="bottom" constant="130" id="E7z-cQ-i7e"/>
+                <constraint firstItem="gdQ-kz-JXJ" firstAttribute="top" secondItem="hbq-v2-vPS" secondAttribute="bottom" constant="106" id="M7V-gj-wZO"/>
+                <constraint firstItem="gdQ-kz-JXJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="MOZ-EF-uw0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hbq-v2-vPS" secondAttribute="trailing" constant="109" id="MVh-Ii-7Md"/>
+                <constraint firstItem="nSu-E3-Wlf" firstAttribute="top" secondItem="4oN-gK-B9z" secondAttribute="bottom" constant="8" symbolic="YES" id="Mb9-OS-Z4P"/>
+                <constraint firstItem="gdQ-kz-JXJ" firstAttribute="top" secondItem="KDP-3t-HFJ" secondAttribute="bottom" constant="30" id="OF4-t4-Lp8"/>
+                <constraint firstItem="ZGa-Hw-wOb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="Rih-np-72F"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KDP-3t-HFJ" secondAttribute="trailing" constant="109" id="TJT-RQ-nke"/>
+                <constraint firstItem="4oN-gK-B9z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="WI4-sV-iL5"/>
+                <constraint firstItem="hyD-0i-VeQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Y88-zM-8H0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZGa-Hw-wOb" secondAttribute="trailing" constant="106" id="ZQr-me-iPf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4oN-gK-B9z" secondAttribute="trailing" constant="109" id="enO-uv-pNb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nSu-E3-Wlf" secondAttribute="trailing" constant="141" id="pdk-F8-Si7"/>
+                <constraint firstItem="ZGa-Hw-wOb" firstAttribute="leading" secondItem="hyD-0i-VeQ" secondAttribute="trailing" constant="26" id="qD6-dC-TTE"/>
+                <constraint firstItem="4oN-gK-B9z" firstAttribute="top" secondItem="hbq-v2-vPS" secondAttribute="bottom" constant="174" id="twG-ce-ooT"/>
+                <constraint firstItem="KDP-3t-HFJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="109" id="vhe-Cm-gyd"/>
+                <constraint firstItem="nSu-E3-Wlf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="141" id="w70-Bc-GWb"/>
+                <constraint firstItem="KDP-3t-HFJ" firstAttribute="top" secondItem="hbq-v2-vPS" secondAttribute="bottom" constant="30" id="wOE-wL-9uv"/>
+                <constraint firstItem="hyD-0i-VeQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="yKg-jp-Ptq"/>
+            </constraints>
+            <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
+        </view>
+    </objects>
+</document>

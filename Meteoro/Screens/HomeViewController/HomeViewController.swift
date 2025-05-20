@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate, SelectedCityViewControllerDelegate {
   
-    
     let selectedCity = UserDefaults.standard.selectedCity 
 
     var viewModel: HomeViewControllerViewModel = {
@@ -122,6 +121,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         savedCityVC.delegate = self
         present(savedCityVC, animated: true, completion: nil)
         
+    }
+    
+    func didTapAccountImage() {
+        let signInVC = SignInAccountViewController(nibName: "SignInAccountViewController", bundle: nil)
+        present(signInVC, animated: true, completion: nil)
     }
     
     

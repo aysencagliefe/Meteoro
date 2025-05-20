@@ -7,7 +7,7 @@ target 'Meteoro' do
 	pod 'Alamofire'
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
-	
+  pod 'FirebaseAnalytics'
 
   # Pods for Meteoro
 
