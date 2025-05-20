@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ic_cloud_24dp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,6 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ic_cloud.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
