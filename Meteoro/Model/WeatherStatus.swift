@@ -27,6 +27,7 @@ enum WeatherStatus: String {
     case dustOrSandStorm = "KF"
     case strongSouthWind = "GKR"
     case strongNorthWind = "KKR"
+    case extremelyHot = "SCK"
 
     var description: String {
         switch self {
@@ -56,6 +57,7 @@ enum WeatherStatus: String {
         case .dustOrSandStorm: return "Toz veya Kum Fırtınası"
         case .strongSouthWind: return "Güneyli Kuvvetli Rüzgar"
         case .strongNorthWind: return "Kuzeyli Kuvvetli Rüzgar"
+        case .extremelyHot: return "Aşırı Sıcak"
         }
     }
 
@@ -109,12 +111,14 @@ enum WeatherStatus: String {
             return [UIColor(hex: 0xFFF44336), UIColor(hex: 0xFFD32F2F)]
         case .strongNorthWind:
             return [UIColor(hex: 0xFF3F51B5), UIColor(hex: 0xFF303F9F)]
+        case .extremelyHot:
+            return [UIColor(hex: 0xFF9800), UIColor(hex: 0xE53935)]
         }
     }
 
     var textColor: UIColor {
         switch self {
-        case .mostlyCloudy, .rainy, .heavyRainy, .shower, .heavyShower, .thunderstormShower, .heavyThunderstormShower, .mixedRainAndSnow:
+        case .mostlyCloudy, .rainy, .heavyRainy, .shower, .heavyShower, .thunderstormShower, .heavyThunderstormShower, .mixedRainAndSnow, .extremelyHot:
             return .white
         default:
             return .black
@@ -145,6 +149,8 @@ enum WeatherStatus: String {
             return UIImage(named: "ic_hail")
         case .mixedRainAndSnow:
             return UIImage(named: "ic_mix_rainy_snowy")
+        case .extremelyHot:
+            return UIImage(named: "ic_thermostat")
         default:
             return UIImage(named: "ic_clear")
         }

@@ -14,7 +14,6 @@ class SignUpAccountViewController: UIViewController {
     
     var tapGesture: UITapGestureRecognizer!
 
-    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var againPasswordTextField: UITextField!
