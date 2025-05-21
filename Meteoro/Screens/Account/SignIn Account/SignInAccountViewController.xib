@@ -26,7 +26,7 @@
                         <constraint firstAttribute="height" constant="34" id="dPd-Ov-FEh"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-FJ-Zab">
                     <rect key="frame" x="130" y="444" width="153" height="73"/>
@@ -50,7 +50,7 @@
                         <constraint firstAttribute="height" constant="34" id="qVw-p0-pXG"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" textContentType="password"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyC-hI-zb6">
                     <rect key="frame" x="141" y="561" width="132" height="44"/>
