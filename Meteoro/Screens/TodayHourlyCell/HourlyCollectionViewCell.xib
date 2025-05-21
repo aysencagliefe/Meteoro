@@ -22,12 +22,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rce-b6-LZQ">
                                 <rect key="frame" x="0.0" y="0.0" width="90" height="120"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-2m-J9G">
-                                        <rect key="frame" x="5" y="43" width="80" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="WOL-CS-Tkv"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-tX-ueW">
                                         <rect key="frame" x="5" y="12" width="80" height="23"/>
                                         <constraints>
@@ -46,29 +40,31 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clear" translatesAutoresizingMaskIntoConstraints="NO" id="Qfk-2m-J9G">
+                                        <rect key="frame" x="33" y="48" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="R5v-Wf-pFm"/>
+                                            <constraint firstAttribute="height" constant="24" id="cbt-O2-xTa"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="PwR-tX-ueW" firstAttribute="top" secondItem="Rce-b6-LZQ" secondAttribute="top" constant="12" id="3Ui-71-Ypp"/>
-                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="centerX" secondItem="Rce-b6-LZQ" secondAttribute="centerX" id="5sP-H2-Wk4"/>
                                     <constraint firstAttribute="trailing" secondItem="bgO-DD-TED" secondAttribute="trailing" constant="5" id="7IF-ae-Va6"/>
                                     <constraint firstAttribute="trailing" secondItem="PwR-tX-ueW" secondAttribute="trailing" constant="5" id="A9P-q6-dhq"/>
+                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="leading" secondItem="Rce-b6-LZQ" secondAttribute="leading" constant="33" id="K7W-aV-1Ja"/>
                                     <constraint firstItem="PwR-tX-ueW" firstAttribute="leading" secondItem="bgO-DD-TED" secondAttribute="leading" id="Ssp-tG-6vt"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qfk-2m-J9G" secondAttribute="trailing" constant="33" id="T4e-XG-3cN"/>
                                     <constraint firstAttribute="bottom" secondItem="bgO-DD-TED" secondAttribute="bottom" constant="12" id="bl5-hX-xO0"/>
+                                    <constraint firstItem="bgO-DD-TED" firstAttribute="top" secondItem="Qfk-2m-J9G" secondAttribute="bottom" constant="13" id="ehv-1J-gOv"/>
+                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="top" secondItem="PwR-tX-ueW" secondAttribute="bottom" constant="13" id="eiu-pu-Jfb"/>
                                     <constraint firstItem="PwR-tX-ueW" firstAttribute="trailing" secondItem="bgO-DD-TED" secondAttribute="trailing" id="jF6-dr-ukY"/>
-                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="centerY" secondItem="Rce-b6-LZQ" secondAttribute="centerY" id="kMt-cD-63o"/>
                                     <constraint firstItem="PwR-tX-ueW" firstAttribute="leading" secondItem="Rce-b6-LZQ" secondAttribute="leading" constant="5" id="q7j-W5-9bg"/>
-                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="leading" secondItem="Rce-b6-LZQ" secondAttribute="leading" constant="5" id="qj4-MF-jYH"/>
                                     <constraint firstItem="bgO-DD-TED" firstAttribute="leading" secondItem="Rce-b6-LZQ" secondAttribute="leading" constant="5" id="rNy-BN-6Vv"/>
-                                    <constraint firstItem="Qfk-2m-J9G" firstAttribute="top" secondItem="PwR-tX-ueW" secondAttribute="bottom" constant="8" id="rf8-ZH-lbj"/>
-                                    <constraint firstAttribute="trailing" secondItem="Qfk-2m-J9G" secondAttribute="trailing" constant="5" id="tul-5p-lrh"/>
-                                    <constraint firstItem="PwR-tX-ueW" firstAttribute="centerX" secondItem="Qfk-2m-J9G" secondAttribute="centerX" id="zUb-X8-q1Y"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Rce-b6-LZQ" secondAttribute="trailing" constant="5" id="rPY-Ow-aZm"/>
-                        </constraints>
                     </stackView>
                 </subviews>
             </view>
@@ -85,10 +81,10 @@
                 <outlet property="temperatureHourlyLabel" destination="bgO-DD-TED" id="GVr-u0-sHB"/>
                 <outlet property="timeHourlyLabel" destination="PwR-tX-ueW" id="pxW-Ea-X7N"/>
             </connections>
-            <point key="canvasLocation" x="203.0534351145038" y="2.8169014084507045"/>
+            <point key="canvasLocation" x="202.89855072463769" y="2.6785714285714284"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="A" width="60" height="60"/>
+        <image name="ic_clear" width="24" height="24"/>
     </resources>
 </document>

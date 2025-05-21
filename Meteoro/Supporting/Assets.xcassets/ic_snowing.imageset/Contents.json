@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ic_snowing_24dp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ic_snowing.png",
+      "filename" : "ic_snowing_72dp.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

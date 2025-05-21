@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ic_hail_24dp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ic_hail.png",
+      "filename" : "ic_hail_72dp.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

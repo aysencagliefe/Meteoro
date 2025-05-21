@@ -9,7 +9,6 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate, SelectedCityViewControllerDelegate {
   
-    
     let selectedCity = UserDefaults.standard.selectedCity 
 
     var viewModel: HomeViewControllerViewModel = {
@@ -102,7 +101,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func nowReceiveData(_data: NowWeatherResponseElement?) {
         self.refreshControl.endRefreshing()
         nowWeatherResponse = _data
+        setBackgroundColorWithNowWeather(nowWeatherResponse: _data)
         homeCollectionView.reloadData()
+    }
+    
+    func setBackgroundColorWithNowWeather(nowWeatherResponse: NowWeatherResponseElement?) {
+        let weatherStatus = WeatherStatus(rawValue: nowWeatherResponse?.hadiseKodu ?? "")
+        view.applyGradient(
+            startColor: weatherStatus?.gradientColors[0],
+            endColor: weatherStatus?.gradientColors[1]
+        )
     }
     
     func todayHourlyReceiveData(_data: TodayHourlyWeatherResponse?) {
@@ -122,6 +130,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         savedCityVC.delegate = self
         present(savedCityVC, animated: true, completion: nil)
         
+    }
+    
+    func didTapAccountImage() {
+        let signInVC = SignInAccountViewController(nibName: "SignInAccountViewController", bundle: nil)
+        present(signInVC, animated: true, completion: nil)
     }
     
     

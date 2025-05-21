@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -21,18 +20,14 @@
                         <rect key="frame" x="12" y="16" width="390" height="318"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Şehir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-TH-oeD">
-                                <rect key="frame" x="16" y="20" width="185" height="26"/>
+                                <rect key="frame" x="16" y="20" width="59.5" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="185" id="MgG-q9-6gb"/>
                                     <constraint firstAttribute="height" constant="26" id="OMb-bl-SFm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clear" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
-                                <rect key="frame" x="26" y="90" width="57" height="88"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-k4-din">
                                 <rect key="frame" x="10" y="224" width="370" height="74"/>
                                 <subviews>
@@ -74,7 +69,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" red="1" green="0.9771871248068027" blue="1" alpha="0.50168149834437081" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="XAQ-nm-lEL" firstAttribute="leading" secondItem="oP1-k4-din" secondAttribute="leading" constant="8" id="DOf-Fq-tdP"/>
                                     <constraint firstAttribute="bottom" secondItem="bPc-DI-1Mh" secondAttribute="bottom" constant="8" id="Dtl-qQ-y43"/>
@@ -106,7 +101,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="uvN-or-pQD" firstAttribute="centerY" secondItem="loR-mz-xRp" secondAttribute="centerY" id="BZs-6E-ThH"/>
                                     <constraint firstItem="uvN-or-pQD" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="top" constant="35" id="XMY-gB-mP0"/>
@@ -119,45 +114,62 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-bD-7Nd">
-                                <rect key="frame" x="156" y="17" width="45" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="KcH-ui-z05"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-bD-7Nd">
+                                <rect key="frame" x="75.5" y="17" width="32" height="32"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="dropDown">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <attributedString key="attributedTitle"/>
                                 </state>
                                 <connections>
                                     <action selector="savedCitiesButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="76Z-Jg-Hkc"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clear" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
+                                <rect key="frame" x="24" y="109" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="wfl-1b-bIB"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="zhp-aC-gCG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-EQ-APd">
+                                <rect key="frame" x="356" y="21" width="24" height="24"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="28" id="OvZ-et-1LQ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="28" id="UEs-DV-oIp"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oP1-k4-din" secondAttribute="trailing" constant="10" id="1Le-V7-AQF"/>
+                            <constraint firstItem="8E7-EQ-APd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="aAT-TH-oeD" secondAttribute="trailing" constant="300" id="2dj-8p-PRL"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="10" id="5e3-7K-zMO"/>
-                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="trailing" secondItem="aAT-TH-oeD" secondAttribute="trailing" id="7ws-Me-6Ry"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="centerY" secondItem="loR-mz-xRp" secondAttribute="centerY" id="6U1-Yx-445"/>
+                            <constraint firstAttribute="trailing" secondItem="8E7-EQ-APd" secondAttribute="trailing" constant="10" id="6mW-lB-Zu9"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="bottom" constant="40" id="CHb-4l-BKh"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="top" secondItem="jSD-bD-7Nd" secondAttribute="bottom" constant="35" id="DPJ-pR-59w"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerX" secondItem="oP1-k4-din" secondAttribute="centerX" id="GZG-oh-DbT"/>
+                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="leading" secondItem="aAT-TH-oeD" secondAttribute="trailing" id="ISQ-si-IPn"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="135" id="IhG-t3-ZhW"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="1sl-IQ-BmX" secondAttribute="centerY" id="Olk-xC-lsr"/>
-                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="26" id="Xzg-4K-jhJ"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="52" id="Y3n-oR-gUm"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="61" id="PL6-TA-VFi"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="24" id="T6J-O9-Xuz"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="Ni9-0i-n8c" secondAttribute="centerY" constant="-25" id="YYe-pD-yoh"/>
                             <constraint firstAttribute="bottom" secondItem="oP1-k4-din" secondAttribute="bottom" constant="20" id="ZGr-da-hdR"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="38" id="bJw-HL-lfO"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="63" id="fwj-KM-n8g"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="20" id="jOG-j5-MEF"/>
-                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="centerY" secondItem="aAT-TH-oeD" secondAttribute="centerY" id="nN7-XU-kem"/>
-                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="44" id="wah-fh-ocy"/>
+                            <constraint firstItem="8E7-EQ-APd" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="21" id="sS8-dc-RA9"/>
+                            <constraint firstItem="jSD-bD-7Nd" firstAttribute="centerY" secondItem="aAT-TH-oeD" secondAttribute="centerY" id="yC2-ot-sdm"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="16" id="zKV-YC-wnf"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Ni9-0i-n8c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="7Ic-ZO-g9e"/>
                 <constraint firstItem="Ni9-0i-n8c" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="16" id="GDB-Sn-CxX"/>
@@ -168,13 +180,14 @@
             </constraints>
             <size key="customSize" width="304" height="220"/>
             <connections>
+                <outlet property="accountImageView" destination="8E7-EQ-APd" id="s9t-bg-aZ8"/>
                 <outlet property="cityNameLabel" destination="aAT-TH-oeD" id="zcL-2Q-gdM"/>
                 <outlet property="dateLabel" destination="XAQ-nm-lEL" id="rhf-cD-Ra8"/>
                 <outlet property="humidityLabel" destination="Db9-Df-O6a" id="XZ6-Pf-UBQ"/>
                 <outlet property="nowWeatherView" destination="Ni9-0i-n8c" id="r01-f2-Unt"/>
                 <outlet property="pressureAirLabel" destination="tZd-xT-oRH" id="kx1-dZ-RtD"/>
                 <outlet property="temperatureLabel" destination="uvN-or-pQD" id="VeG-Io-vEW"/>
-                <outlet property="visualSkyLabel" destination="1sl-IQ-BmX" id="rSM-r5-HY6"/>
+                <outlet property="visualSkyImageView" destination="1sl-IQ-BmX" id="buT-Zk-mtI"/>
                 <outlet property="windyLabel" destination="bPc-DI-1Mh" id="Hgg-wz-tge"/>
             </connections>
             <point key="canvasLocation" x="320.28985507246381" y="15.401785714285714"/>
@@ -182,9 +195,7 @@
     </objects>
     <resources>
         <image name="dropDown" width="32" height="32"/>
-        <image name="ic_clear" width="8" height="8"/>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="ic_account" width="24" height="24"/>
+        <image name="ic_clear" width="24" height="24"/>
     </resources>
 </document>

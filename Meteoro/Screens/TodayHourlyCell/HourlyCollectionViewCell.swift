@@ -12,9 +12,11 @@ class HourlyCollectionViewCell: UICollectionViewCell {
     var hourlyGuess: Tahmin? {
         didSet {
             guard let hourlyGuess else { return }
+            let weatherStatus = WeatherStatus(rawValue: hourlyGuess.hadise)
             timeHourlyLabel.text = dateFormatter(dateString: hourlyGuess.tarih)
-            skyHourlyimage.image = UIImage(named: hourlyGuess.hadise)
+            skyHourlyimage.image = weatherStatus?.icon
             temperatureHourlyLabel.text = String("\(hourlyGuess.sicaklik)°C")
+            hourlyView.backgroundColor = weatherStatus?.gradientColors[0]
         }
     }
 

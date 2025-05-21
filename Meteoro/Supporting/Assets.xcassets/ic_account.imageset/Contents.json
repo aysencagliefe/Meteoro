@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "ic_partly_cloudy_24dp.png",
+      "filename" : "ic_account_24dp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -10,7 +10,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ic_partly_cloudy_72dp.png",
+      "filename" : "ic_account_72dp.png.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

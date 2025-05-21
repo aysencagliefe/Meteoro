@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInAccountViewController" customModule="Meteoro" customModuleProvider="target">
+            <connections>
+                <outlet property="eMailTextField" destination="yh3-rd-S9N" id="9Rj-7B-G0d"/>
+                <outlet property="passwordTextField" destination="RZo-Ny-y6N" id="aap-hp-pNO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yh3-rd-S9N">
+                    <rect key="frame" x="98" y="316" width="218" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="218" id="cFq-EU-a27"/>
+                        <constraint firstAttribute="height" constant="34" id="dPd-Ov-FEh"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMT-FJ-Zab">
+                    <rect key="frame" x="130" y="444" width="153" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="73" id="8ee-Bg-PvF"/>
+                        <constraint firstAttribute="width" constant="153" id="t32-Eq-uA0"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="21"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signInButton:" destination="-1" eventType="touchUpInside" id="8Ql-CQ-i3e"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RZo-Ny-y6N">
+                    <rect key="frame" x="98" y="380" width="218" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="218" id="GqR-im-Ntr"/>
+                        <constraint firstAttribute="height" constant="34" id="qVw-p0-pXG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" textContentType="password"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyC-hI-zb6">
+                    <rect key="frame" x="141" y="561" width="132" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="132" id="L88-vv-AoV"/>
+                        <constraint firstAttribute="height" constant="44" id="vMk-TO-Mer"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Kayıt Ol">
+                        <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="signUpButton:" destination="-1" eventType="touchUpInside" id="BO1-HR-Kms"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giriş Yap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMf-Eh-NkL">
+                    <rect key="frame" x="104" y="183" width="206" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="206" id="9bY-cI-tu4"/>
+                        <constraint firstAttribute="height" constant="50" id="9td-8D-AKQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.57931608976802718" green="0.77992919190680277" blue="0.96220838858911573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tMf-Eh-NkL" secondAttribute="trailing" constant="104" id="7QG-Oc-Qqe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yh3-rd-S9N" secondAttribute="trailing" constant="98" id="JAU-M1-2kw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KyC-hI-zb6" secondAttribute="trailing" constant="141" id="NQ5-cV-vv5"/>
+                <constraint firstItem="tMf-Eh-NkL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="104" id="NwQ-yQ-fTw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RZo-Ny-y6N" secondAttribute="trailing" constant="98" id="QMI-n9-fuv"/>
+                <constraint firstItem="yh3-rd-S9N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="98" id="RAy-9T-DYq"/>
+                <constraint firstItem="RZo-Ny-y6N" firstAttribute="top" secondItem="yh3-rd-S9N" secondAttribute="bottom" constant="30" id="REe-QT-QUk"/>
+                <constraint firstItem="RZo-Ny-y6N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="98" id="aHE-Lj-Dav"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KyC-hI-zb6" secondAttribute="bottom" constant="223" id="cfd-6i-F5h"/>
+                <constraint firstItem="KyC-hI-zb6" firstAttribute="top" secondItem="nMT-FJ-Zab" secondAttribute="bottom" constant="44" id="e5M-Mh-kvZ"/>
+                <constraint firstItem="nMT-FJ-Zab" firstAttribute="top" secondItem="RZo-Ny-y6N" secondAttribute="bottom" constant="30" id="gzC-yY-5gL"/>
+                <constraint firstItem="tMf-Eh-NkL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="87" id="hUM-PF-Gj6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nMT-FJ-Zab" secondAttribute="trailing" constant="131" id="hfr-to-vv8"/>
+                <constraint firstItem="KyC-hI-zb6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="141" id="oeV-9O-3G7"/>
+                <constraint firstItem="nMT-FJ-Zab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="130" id="pje-J0-cG8"/>
+            </constraints>
+            <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
+        </view>
+    </objects>
+</document>

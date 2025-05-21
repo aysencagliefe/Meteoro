@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "ic_windy_24dp.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -9,7 +10,7 @@
       "scale" : "2x"
     },
     {
-      "filename" : "ic_windy.png",
+      "filename" : "ic_windy_72dp.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
