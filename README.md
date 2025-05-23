@@ -1,8 +1,8 @@
 # Meteoro <img src="https://github.com/user-attachments/assets/1f989d31-fe01-4461-a197-a66b08e4d97b" width="30"/>
 
-Meteoro, kullanıcı dostu bir arayüzle hava durumu bilgilerini sunan modern bir iOS uygulamasıdır. Anlık, saatlik ve 5 günlük hava durumu tahminlerine ek olarak şehir arama ve kullanıcı hesabı yönetimi gibi işlevler sunar.
+Meteoro is a modern iOS application that provides weather information with a user-friendly interface. In addition to current, hourly, and 5-day forecasts, it offers features such as city search and user account management.
 
-## Ekran Görüntüleri
+## ScreenShots
 
 <table>
   <tr>
@@ -12,10 +12,10 @@ Meteoro, kullanıcı dostu bir arayüzle hava durumu bilgilerini sunan modern bi
     <td><img src="https://github.com/user-attachments/assets/3cd4417b-2107-489d-83a3-e32bfa1f5682" width="200"/></td>
   </tr>
   <tr>
-    <td><b>Ana Sayfa 1</b></td>
-    <td><b>Ana Sayfa 2</b></td>
-    <td><b>Ana Sayfa 3</b></td>
-    <td><b>Şehir Arama</b></td>
+    <td><b>Home Page 1</b></td>
+    <td><b>Home Page 2</b></td>
+    <td><b>Home Page 3</b></td>
+    <td><b>Search City</b></td>
   </tr>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/0d2adc93-fadd-49a6-b04c-d277830e444c" width="200"/></td>
@@ -24,41 +24,43 @@ Meteoro, kullanıcı dostu bir arayüzle hava durumu bilgilerini sunan modern bi
     <td><img src="https://github.com/user-attachments/assets/3fb01a9b-39b2-40f1-bdd4-686144a94d2a" width="200"/></td>
   </tr>
   <tr>
-    <td><b>Kayıtlı Şehirler</b></td>
-    <td><b>Kayıtlı Şehir Silme</b></td>
-    <td><b>Giriş Ekranı</b></td>
-    <td><b>Kayıt Olma Ekranı</b></td>
+    <td><b>Saved Cities</b></td>
+    <td><b>Delete Saved Cities</b></td>
+    <td><b>Login</b></td>
+    <td><b>Register</b></td>
   </tr>
 </table>
 
 
 
-## Özellikler
+## Features
 
-- Saatlik hava durumu tahmini
-- Anlık hava durumu bilgisi
-- 5 günlük hava durumu tahmini
-- Şehir arama ve şehir seçimi
-- Kayıtlı şehirleri görüntüleme ve kayıtlı şehirleri silme
-- Firebase Auth ile kullanıcı girişi ve kayıt işlemleri
+- Hourly weather forecast
+- Current weather information
+- 5-day weather forecast
+- City search and selection
+- View and delete saved cities
+- User login and registration with Firebase Auth
 
-## Kullanılan Teknolojiler
+
+## Technologies Used
 
 - Swift
-- UIKit (Programatik + .xib)
-- MVVM Mimarisi
-- URLSession – Networking işlemleri
-- Codable – JSON parse işlemleri
+- UIKit
+- MVVM Architecture
+- XIB-based UI Design (No Storyboard)
+- Alamofire (for networking)
 - Firebase Authentication
-- Auto Layout (xib tabanlı)
+- UserDefaults (for simple data storage)
+- Custom Extensions (e.g., Gradient, AlertDialog)
 - UserDefaults
 
 ## API
 
-- (https://www.mgm.gov.tr/) üzerinden hava durumu verileri alınmaktadır.
+- Weather data is retrieved from (https://www.mgm.gov.tr/)
 
-## ⚙️ Kurulum
+## Installation
 
-1. Bu repoyu klonlayın:
+1. Clone this repository:
    ```bash
    git clone https://github.com/kullaniciadi/meteoro.git
