@@ -40,6 +40,9 @@ class SignInAccountViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
 
+    @IBAction func xButtonDismiss(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func signInButton(_ sender: UIButton) {
         Auth.auth().signIn(withEmail: eMailTextField.text ?? "", password: passwordTextField.text ?? "") { authResult, error in
             if let error = error {
@@ -58,6 +61,7 @@ class SignInAccountViewController: UIViewController {
     
     @IBAction func signUpButton(_ sender: UIButton) {
         let signUpVC = SignUpAccountViewController(nibName: "SignUpAccountViewController", bundle: nil)
+        signUpVC.modalPresentationStyle = .fullScreen
         present(signUpVC, animated: true, completion: nil)
     }
     

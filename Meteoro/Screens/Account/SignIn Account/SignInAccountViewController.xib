@@ -77,11 +77,21 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" role="cancel" translatesAutoresizingMaskIntoConstraints="NO" id="655-Ch-Wom">
+                    <rect key="frame" x="20" y="62" width="50" height="45"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="close_20dp_5F6368_FILL0_wght400_GRAD0_opsz20"/>
+                    <connections>
+                        <action selector="xButtonDismiss:" destination="-1" eventType="touchUpInside" id="o9U-F9-CII"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.57931608976802718" green="0.77992919190680277" blue="0.96220838858911573" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
+                <constraint firstItem="655-Ch-Wom" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="4uH-vz-Tlk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tMf-Eh-NkL" secondAttribute="trailing" constant="104" id="7QG-Oc-Qqe"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="655-Ch-Wom" secondAttribute="trailing" constant="344" id="CcE-Z5-kET"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yh3-rd-S9N" secondAttribute="trailing" constant="98" id="JAU-M1-2kw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KyC-hI-zb6" secondAttribute="trailing" constant="141" id="NQ5-cV-vv5"/>
                 <constraint firstItem="tMf-Eh-NkL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="104" id="NwQ-yQ-fTw"/>
@@ -90,14 +100,19 @@
                 <constraint firstItem="RZo-Ny-y6N" firstAttribute="top" secondItem="yh3-rd-S9N" secondAttribute="bottom" constant="30" id="REe-QT-QUk"/>
                 <constraint firstItem="RZo-Ny-y6N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="98" id="aHE-Lj-Dav"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KyC-hI-zb6" secondAttribute="bottom" constant="223" id="cfd-6i-F5h"/>
+                <constraint firstItem="655-Ch-Wom" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="62" id="cr1-20-DY7"/>
                 <constraint firstItem="KyC-hI-zb6" firstAttribute="top" secondItem="nMT-FJ-Zab" secondAttribute="bottom" constant="44" id="e5M-Mh-kvZ"/>
                 <constraint firstItem="nMT-FJ-Zab" firstAttribute="top" secondItem="RZo-Ny-y6N" secondAttribute="bottom" constant="30" id="gzC-yY-5gL"/>
                 <constraint firstItem="tMf-Eh-NkL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="87" id="hUM-PF-Gj6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nMT-FJ-Zab" secondAttribute="trailing" constant="131" id="hfr-to-vv8"/>
                 <constraint firstItem="KyC-hI-zb6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="141" id="oeV-9O-3G7"/>
                 <constraint firstItem="nMT-FJ-Zab" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="130" id="pje-J0-cG8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="655-Ch-Wom" secondAttribute="bottom" constant="721" id="rDx-FD-Osm"/>
             </constraints>
-            <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
+            <point key="canvasLocation" x="118.84057971014494" y="19.419642857142858"/>
         </view>
     </objects>
+    <resources>
+        <image name="close_20dp_5F6368_FILL0_wght400_GRAD0_opsz20" width="26.666666030883789" height="26.666666030883789"/>
+    </resources>
 </document>
