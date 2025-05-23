@@ -127,6 +127,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func didTapSavedButton(in cell: NowWeatherCollectionViewCell) {
         let savedCityVC = SavedCitiesViewController(nibName: "SavedCitiesViewController", bundle: nil)
+        savedCityVC.modalPresentationStyle = .fullScreen
         savedCityVC.delegate = self
         present(savedCityVC, animated: true, completion: nil)
         
@@ -134,6 +135,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func didTapAccountImage() {
         let signInVC = SignInAccountViewController(nibName: "SignInAccountViewController", bundle: nil)
+        signInVC.modalPresentationStyle = .fullScreen
         present(signInVC, animated: true, completion: nil)
     }
     
