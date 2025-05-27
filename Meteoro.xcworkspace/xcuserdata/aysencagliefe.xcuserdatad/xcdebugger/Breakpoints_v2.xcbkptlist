@@ -34,6 +34,36 @@
             endingLineNumber = "55"
             landmarkName = "firebaseAuth()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "722AAE7B-C984-4C55-B7F0-2E4A806D6DA5 - d483716753560f74"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Meteoro.SignUpAccountViewController.firebaseAuth() -&gt; ()"
+                  moduleName = "Meteoro.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aysencagliefe/Desktop/Meteoro/Meteoro/Screens/Account/SignUpAccount/SignUpAccountViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55">
+               </Location>
+               <Location
+                  uuid = "722AAE7B-C984-4C55-B7F0-2E4A806D6DA5 - 79addea9346789d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;FirebaseAuth.AuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Meteoro.SignUpAccountViewController.firebaseAuth() -&gt; ()"
+                  moduleName = "Meteoro.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aysencagliefe/Desktop/Meteoro/Meteoro/Screens/Account/SignUpAccount/SignUpAccountViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
