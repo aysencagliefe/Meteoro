@@ -94,7 +94,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loR-mz-xRp">
                                 <rect key="frame" x="135" y="84" width="120" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Derece" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvN-or-pQD">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Derece" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvN-or-pQD">
                                         <rect key="frame" x="14" y="35" width="92.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
@@ -106,7 +106,7 @@
                                     <constraint firstItem="uvN-or-pQD" firstAttribute="centerY" secondItem="loR-mz-xRp" secondAttribute="centerY" id="BZs-6E-ThH"/>
                                     <constraint firstItem="uvN-or-pQD" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="top" constant="35" id="XMY-gB-mP0"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="120" id="nMT-HN-Vth"/>
-                                    <constraint firstItem="uvN-or-pQD" firstAttribute="centerX" secondItem="loR-mz-xRp" secondAttribute="centerX" constant="0.25" id="qR8-Ds-aqa"/>
+                                    <constraint firstItem="uvN-or-pQD" firstAttribute="centerX" secondItem="loR-mz-xRp" secondAttribute="centerX" id="qR8-Ds-aqa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -154,8 +154,8 @@
                             <constraint firstItem="oP1-k4-din" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="bottom" constant="40" id="CHb-4l-BKh"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerX" secondItem="oP1-k4-din" secondAttribute="centerX" id="GZG-oh-DbT"/>
                             <constraint firstItem="jSD-bD-7Nd" firstAttribute="leading" secondItem="aAT-TH-oeD" secondAttribute="trailing" id="ISQ-si-IPn"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="135" id="IhG-t3-ZhW"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="61" id="PL6-TA-VFi"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="135" id="IhG-t3-ZhW"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="61" id="PL6-TA-VFi"/>
                             <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="24" id="T6J-O9-Xuz"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="Ni9-0i-n8c" secondAttribute="centerY" constant="-25" id="YYe-pD-yoh"/>
                             <constraint firstAttribute="bottom" secondItem="oP1-k4-din" secondAttribute="bottom" constant="20" id="ZGr-da-hdR"/>
