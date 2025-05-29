@@ -14,7 +14,7 @@ enum WeatherStatus: String {
     case shower = "SY"
     case heavyShower = "KSY"
     case thunderstormShower = "GSY"
-    case heavyThunderstormShower = "KYG"
+    case heavyThunderstormShower = "KGY"
     case mixedRainAndSnow = "KKY"
     case lightSnowy = "HKY"
     case snowyWeather = "K"
@@ -58,6 +58,7 @@ enum WeatherStatus: String {
         case .strongSouthWind: return "Güneyli Kuvvetli Rüzgar"
         case .strongNorthWind: return "Kuzeyli Kuvvetli Rüzgar"
         case .extremelyHot: return "Aşırı Sıcak"
+            
         }
     }
 

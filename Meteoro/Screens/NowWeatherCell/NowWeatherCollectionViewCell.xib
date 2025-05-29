@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ni9-0i-n8c">
                         <rect key="frame" x="12" y="16" width="390" height="318"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Şehir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-TH-oeD">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Şehir" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAT-TH-oeD">
                                 <rect key="frame" x="16" y="20" width="59.5" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="OMb-bl-SFm"/>
@@ -115,7 +116,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jSD-bD-7Nd">
-                                <rect key="frame" x="75.5" y="17" width="32" height="32"/>
+                                <rect key="frame" x="75.5" y="21" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="dropDown">
                                     <attributedString key="attributedTitle"/>
@@ -125,10 +126,11 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_clear" translatesAutoresizingMaskIntoConstraints="NO" id="1sl-IQ-BmX">
-                                <rect key="frame" x="24" y="109" width="50" height="50"/>
+                                <rect key="frame" x="30" y="99" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="wfl-1b-bIB"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="zhp-aC-gCG"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="FCW-HE-3zp"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="N4d-9b-IXR"/>
+                                    <constraint firstAttribute="width" secondItem="1sl-IQ-BmX" secondAttribute="height" multiplier="1:1" id="ufA-6E-ueu"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_account" translatesAutoresizingMaskIntoConstraints="NO" id="8E7-EQ-APd">
@@ -142,26 +144,38 @@
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="28" id="UEs-DV-oIp"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gök Gürültülü Sağanak Yağışlı" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip9-Zs-jpb">
+                                <rect key="frame" x="12" y="157" width="106.5" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="sBb-XT-2C8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oP1-k4-din" secondAttribute="trailing" constant="10" id="1Le-V7-AQF"/>
                             <constraint firstItem="8E7-EQ-APd" firstAttribute="leading" relation="lessThanOrEqual" secondItem="aAT-TH-oeD" secondAttribute="trailing" constant="300" id="2dj-8p-PRL"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="53" id="5ch-s6-bhQ"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="10" id="5e3-7K-zMO"/>
-                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="centerY" secondItem="loR-mz-xRp" secondAttribute="centerY" id="6U1-Yx-445"/>
                             <constraint firstAttribute="trailing" secondItem="8E7-EQ-APd" secondAttribute="trailing" constant="10" id="6mW-lB-Zu9"/>
+                            <constraint firstItem="Ip9-Zs-jpb" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="12" id="6mu-SQ-SCH"/>
+                            <constraint firstItem="oP1-k4-din" firstAttribute="top" relation="lessThanOrEqual" secondItem="Ip9-Zs-jpb" secondAttribute="bottom" constant="50" id="9Na-0t-Yfz"/>
                             <constraint firstItem="oP1-k4-din" firstAttribute="top" secondItem="loR-mz-xRp" secondAttribute="bottom" constant="40" id="CHb-4l-BKh"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerX" secondItem="oP1-k4-din" secondAttribute="centerX" id="GZG-oh-DbT"/>
                             <constraint firstItem="jSD-bD-7Nd" firstAttribute="leading" secondItem="aAT-TH-oeD" secondAttribute="trailing" id="ISQ-si-IPn"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="135" id="IhG-t3-ZhW"/>
-                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="61" id="PL6-TA-VFi"/>
-                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="24" id="T6J-O9-Xuz"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ip9-Zs-jpb" secondAttribute="trailing" constant="12" id="UA8-Oi-pe7"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="centerY" secondItem="Ni9-0i-n8c" secondAttribute="centerY" constant="-25" id="YYe-pD-yoh"/>
                             <constraint firstAttribute="bottom" secondItem="oP1-k4-din" secondAttribute="bottom" constant="20" id="ZGr-da-hdR"/>
                             <constraint firstItem="loR-mz-xRp" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="38" id="bJw-HL-lfO"/>
-                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="top" secondItem="aAT-TH-oeD" secondAttribute="bottom" constant="63" id="fwj-KM-n8g"/>
+                            <constraint firstItem="1sl-IQ-BmX" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="30" id="e2u-Jp-8RP"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="20" id="jOG-j5-MEF"/>
+                            <constraint firstItem="Ip9-Zs-jpb" firstAttribute="top" secondItem="1sl-IQ-BmX" secondAttribute="bottom" constant="8" symbolic="YES" id="lSO-aw-5K0"/>
+                            <constraint firstItem="loR-mz-xRp" firstAttribute="leading" relation="lessThanOrEqual" secondItem="1sl-IQ-BmX" secondAttribute="trailing" constant="55" id="rLF-i2-xzC"/>
                             <constraint firstItem="8E7-EQ-APd" firstAttribute="top" secondItem="Ni9-0i-n8c" secondAttribute="top" constant="21" id="sS8-dc-RA9"/>
                             <constraint firstItem="jSD-bD-7Nd" firstAttribute="centerY" secondItem="aAT-TH-oeD" secondAttribute="centerY" id="yC2-ot-sdm"/>
                             <constraint firstItem="aAT-TH-oeD" firstAttribute="leading" secondItem="Ni9-0i-n8c" secondAttribute="leading" constant="16" id="zKV-YC-wnf"/>
@@ -188,13 +202,14 @@
                 <outlet property="pressureAirLabel" destination="tZd-xT-oRH" id="kx1-dZ-RtD"/>
                 <outlet property="temperatureLabel" destination="uvN-or-pQD" id="VeG-Io-vEW"/>
                 <outlet property="visualSkyImageView" destination="1sl-IQ-BmX" id="buT-Zk-mtI"/>
+                <outlet property="weatherStatusLabel" destination="Ip9-Zs-jpb" id="ZGO-vZ-SwL"/>
                 <outlet property="windyLabel" destination="bPc-DI-1Mh" id="Hgg-wz-tge"/>
             </connections>
             <point key="canvasLocation" x="320.28985507246381" y="15.401785714285714"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="dropDown" width="32" height="32"/>
+        <image name="dropDown" width="24" height="24"/>
         <image name="ic_account" width="24" height="24"/>
         <image name="ic_clear" width="24" height="24"/>
     </resources>

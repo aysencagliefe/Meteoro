@@ -8,8 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate, SelectedCityViewControllerDelegate {
+    
   
-    let selectedCity = UserDefaults.standard.selectedCity 
+    var selectedCity = UserDefaults.standard.selectedCity
 
     var viewModel: HomeViewControllerViewModel = {
         HomeViewControllerViewModel(
@@ -33,15 +34,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         homeCollectionView.register(UINib(nibName: "NowWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NowWeatherCell")
         homeCollectionView.register(UINib(nibName: "TodayHourlyWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TodayHourlyWeatherCell")
         homeCollectionView.register(UINib(nibName: "FiveDaysWeatherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FiveDaysWeatherCell")
-    
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         viewModel.nowWeather(merkezid: String(describing: selectedCity?.merkezID ?? 0))
         viewModel.todayHourlyWeather(istno: String(describing: selectedCity?.saatlikTahminIstNo ?? 0))
         viewModel.fiveDaysWeather(istno: String(describing: selectedCity?.gunlukTahminIstNo ?? 0))
     }
-   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -75,7 +71,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
-                return CGSize(width: collectionView.frame.width, height: 420)
+                return CGSize(width: collectionView.frame.width, height: 435)
             default:
                 return CGSize.zero
             }
@@ -137,6 +133,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let signInVC = SignInAccountViewController(nibName: "SignInAccountViewController", bundle: nil)
         signInVC.modalPresentationStyle = .fullScreen
         present(signInVC, animated: true, completion: nil)
+    }
+    
+    func didTapCityNameLabel() {
+        let savedCityVC = SavedCitiesViewController(nibName: "SavedCitiesViewController", bundle: nil)
+        savedCityVC.modalPresentationStyle = .fullScreen
+        savedCityVC.delegate = self
+        present(savedCityVC, animated: true, completion: nil)
     }
     
     
