@@ -7,6 +7,7 @@ target 'Meteoro' do
 	pod 'Alamofire'
 	pod 'FirebaseAuth'
 	pod 'FirebaseFirestore'
+	pod 'Google-Mobile-Ads-SDK'
   pod 'FirebaseAnalytics'
 
   # Pods for Meteoro
