@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, HomeViewControllerDelegate, NowWeatherCollectionViewCellDelegate, SelectedCityViewControllerDelegate {
     
@@ -21,6 +22,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var todayHourlyResponse: TodayHourlyWeatherResponse?
     var fiveDaysResponse: FiveDaysWeatherResponse?
     let refreshControl = UIRefreshControl()
+    var bannerView: BannerView!
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
@@ -37,7 +39,37 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         viewModel.nowWeather(merkezid: String(describing: selectedCity?.merkezID ?? 0))
         viewModel.todayHourlyWeather(istno: String(describing: selectedCity?.saatlikTahminIstNo ?? 0))
         viewModel.fiveDaysWeather(istno: String(describing: selectedCity?.gunlukTahminIstNo ?? 0))
+        let viewWidth = view.frame.inset(by: view.safeAreaInsets).width
+        let adaptiveSize = currentOrientationAnchoredAdaptiveBanner(width: viewWidth)
+            bannerView = BannerView(adSize: adaptiveSize)
+        addBannerViewToView(bannerView)
+        bannerView.adUnitID = "ca-app-pub-2654282064335366/6098692805"
+        bannerView.rootViewController = self
+        bannerView.load(Request())
     }
+    
+    
+    func addBannerViewToView(_ bannerView: BannerView) {
+      bannerView.translatesAutoresizingMaskIntoConstraints = false
+      view.addSubview(bannerView)
+      view.addConstraints(
+        [NSLayoutConstraint(item: bannerView,
+                            attribute: .bottom,
+                            relatedBy: .equal,
+                            toItem: view.safeAreaLayoutGuide,
+                            attribute: .bottom,
+                            multiplier: 1,
+                            constant: 0),
+        NSLayoutConstraint(item: bannerView,
+                            attribute: .centerX,
+                            relatedBy: .equal,
+                            toItem: view,
+                            attribute: .centerX,
+                            multiplier: 1,
+                            constant: 0)
+        ])
+    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -71,7 +103,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             case 1:
                 return CGSize(width: collectionView.frame.width, height: 150)
             case 2:
-                return CGSize(width: collectionView.frame.width, height: 435)
+                return CGSize(width: collectionView.frame.width, height: 490)
             default:
                 return CGSize.zero
             }

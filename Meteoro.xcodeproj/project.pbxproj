@@ -97,6 +97,7 @@
 				75C8192B2DD7580B000F7B8B /* Frameworks */,
 				75C8192C2DD7580B000F7B8B /* Resources */,
 				AC27E7989F272092D906D674 /* [CP] Embed Pods Frameworks */,
+				C6542BA279D404FD5ADBF2A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -163,17 +164,30 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
-			outputPaths = (
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6542BA279D404FD5ADBF2A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Meteoro/Pods-Meteoro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DBBDD168BA3C3507D675D557 /* [CP] Check Pods Manifest.lock */ = {
