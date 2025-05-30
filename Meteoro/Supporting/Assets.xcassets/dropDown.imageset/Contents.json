@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "arrow_drop_down_24dp_999999_FILL0_wght400_GRAD0_opsz24.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "arrow_drop_down_48dp_999999_FILL0_wght400_GRAD0_opsz48.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dropDown.png",
+      "filename" : "arrow_drop_down_72dp_999999_FILL0_wght400_GRAD0_opsz48.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

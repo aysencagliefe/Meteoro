@@ -20,6 +20,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var windyLabel: UILabel!
     @IBOutlet weak var pressureAirLabel: UILabel!
+    @IBOutlet weak var weatherStatusLabel: UILabel!
     
     var selectedCity: SearchCitiesResponse? {
         didSet {
@@ -38,6 +39,7 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
                 cityNameLabel.text = "\(nowWeatherResponse.istNo)"
                 dateLabel.text = dateFormatter(dateString: nowWeatherResponse.veriZamani)
                 visualSkyImageView.image = weatherStatus?.icon
+                weatherStatusLabel.text = weatherStatus?.description
                 temperatureLabel.text = String("\(nowWeatherResponse.sicaklik )°C")
                 humidityLabel.text =    String("Nem: %\(nowWeatherResponse.nem)")
                 windyLabel.text =       String("Rüzgar: \(nowWeatherResponse.ruzgarHiz.toFormattedString(withDecimalPlaces: 2)) km/sa")
@@ -54,14 +56,21 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
         nowWeatherView.setupCardView()
         
         accountImageView.isUserInteractionEnabled = true
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(accountImageTapped))
-        accountImageView.addGestureRecognizer(tapGesture)
+        let tapGestureImage = UITapGestureRecognizer(target: self, action: #selector(accountImageTapped))
+        accountImageView.addGestureRecognizer(tapGestureImage)
+        
+        cityNameLabel.isUserInteractionEnabled = true
+        let tapGestureLabel = UITapGestureRecognizer(target: self, action:
+            #selector(cityNameLabelTapped))
+        cityNameLabel.addGestureRecognizer(tapGestureLabel)
     }
     
     @objc func accountImageTapped() {
         delegate?.didTapAccountImage()
     }
-    
+    @objc func cityNameLabelTapped() {
+        delegate?.didTapCityNameLabel()
+    }
     
     
     @IBAction func savedCitiesButton(_ sender: Any) {
@@ -93,5 +102,5 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
 protocol NowWeatherCollectionViewCellDelegate: AnyObject {
     func didTapSavedButton(in cell: NowWeatherCollectionViewCell)
     func didTapAccountImage()
-    
+    func didTapCityNameLabel()
 }
