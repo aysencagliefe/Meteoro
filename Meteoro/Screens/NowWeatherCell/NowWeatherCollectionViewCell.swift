@@ -55,7 +55,8 @@ class NowWeatherCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         nowWeatherView.setupCardView()
         
-        accountImageView.isUserInteractionEnabled = true
+        accountImageView.isHidden = true
+        accountImageView.isUserInteractionEnabled = false
         let tapGestureImage = UITapGestureRecognizer(target: self, action: #selector(accountImageTapped))
         accountImageView.addGestureRecognizer(tapGestureImage)
         
